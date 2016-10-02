@@ -40,7 +40,7 @@ class SliderPageControllerExtension extends DataExtension {
 
   public function ActiveSlides() {
     $slides = $this->owner->Slides();
-    $parent = $this->Parent();
+    $parent = $this->owner->Parent();
 
     if(!$slides->first() && $parent) {
       $slides = $parent->Slides();
