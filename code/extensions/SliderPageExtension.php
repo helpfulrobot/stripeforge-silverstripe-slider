@@ -1,6 +1,10 @@
 <?php
 class SliderPageExtension extends DataExtension {
 
+  private static $db = [
+    'DisplaySlidesOnChildren' => 'Boolean'
+  ];
+
   private static $has_one = [
     'SlidesFrom' => 'Page'
   ];
@@ -48,6 +52,8 @@ class SliderPageExtension extends DataExtension {
         DropdownField::create('SlidesFromID', 'Slides übernehmen von', $source)
           ->setRightTitle('Zeigt die Slides der ausgewählten Seite an.')
           ->setEmptyString('(Bitte wählen Sie eine Seite)'),
+        DropdownField::create('DisplaySlidesOnChildren', 'Auf Unterseiten anzeigen', [1 => 'Ja', 0 => 'Nein'], 1)
+          ->setRightTitle('Zeigt die Slides auch auf den Unterseiten an, sollten diese keine eigenen haben.'),
         GridField::create('Slides', 'Slides', $this->owner->Slides(), SFGrid_Relation::create(30, false, 'SortOrder'))
       ]);
 

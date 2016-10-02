@@ -40,6 +40,12 @@ class SliderPageControllerExtension extends DataExtension {
 
   public function ActiveSlides() {
     $slides = $this->owner->Slides();
+    $parent = $this->Parent();
+
+    if(!$slides->first() && $parent) {
+      $slides = $parent->Slides();
+    }
+
     return $slides->filter('Active', true)->sort('SortOrder');
   }
 }
