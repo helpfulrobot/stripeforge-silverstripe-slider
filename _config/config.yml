@@ -1,0 +1,8 @@
+---
+Name: slider
+After:
+  - 'tweaks/*'
+---
+# ShopItem:
+#   extensions:
+#     - StockShopItemExtension
