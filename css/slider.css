@@ -1,0 +1,488 @@
+@charset "UTF-8";
+/* line 2, ../../mysite/scss/_extends.scss */
+.cf, .page__slider .bx-wrapper .bx-pager {
+  *zoom: 1;
+}
+/* line 5, ../../mysite/scss/_extends.scss */
+.cf:before, .page__slider .bx-wrapper .bx-pager:before {
+  content: "";
+  display: table;
+}
+/* line 10, ../../mysite/scss/_extends.scss */
+.cf:after, .page__slider .bx-wrapper .bx-pager:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 22, ../../mysite/scss/_extends.scss */
+.wrapper,
+.container {
+  width: calc(100% - 36px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 34, ../../mysite/scss/_extends.scss */
+.btn, .page__slider .bx-wrapper .bx-controls-direction a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 15.5px !important;
+  width: auto;
+  line-height: 1;
+  color: #f2565f;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 4px solid #f2565f;
+  font-size: 1rem;
+  -moz-transition: all, 0.3s, linear;
+  -o-transition: all, 0.3s, linear;
+  -webkit-transition: all, 0.3s, linear;
+  transition: all, 0.3s, linear;
+}
+/* line 49, ../../mysite/scss/_extends.scss */
+.btn:hover, .page__slider .bx-wrapper .bx-controls-direction a:hover {
+  color: #ffffff;
+  background: #f2565f;
+  border-color: #f2565f;
+  text-decoration: underline;
+}
+@media screen and (max-width: 480px) {
+  /* line 34, ../../mysite/scss/_extends.scss */
+  .btn, .page__slider .bx-wrapper .bx-controls-direction a {
+    padding: 11.9px !important;
+    border-width: 2px;
+  }
+}
+
+/* line 62, ../../mysite/scss/_extends.scss */
+.btn.white, .page__slider .bx-wrapper .bx-controls-direction a {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+/* line 66, ../../mysite/scss/_extends.scss */
+.btn.white:hover, .page__slider .bx-wrapper .bx-controls-direction a:hover {
+  border-color: #ffffff;
+  color: #1a1f22;
+  background: #ffffff;
+}
+
+/* line 73, ../../mysite/scss/_extends.scss */
+.btn.neutral {
+  color: #1a1f22;
+  border-color: #1a1f22;
+}
+/* line 77, ../../mysite/scss/_extends.scss */
+.btn.neutral:hover {
+  color: #ffffff;
+  border-color: #1a1f22;
+  background: #1a1f22;
+}
+
+/* line 97, ../../mysite/scss/_extends.scss */
+.highlight {
+  padding: 36px;
+  background: #009ee2;
+  color: #ffffff;
+  margin-bottom: 1.25em;
+}
+/* line 103, ../../mysite/scss/_extends.scss */
+.highlight a {
+  color: #ffffff;
+}
+/* line 106, ../../mysite/scss/_extends.scss */
+.highlight a:hover {
+  color: #00577c;
+}
+@media screen and (max-width: 768px) {
+  /* line 97, ../../mysite/scss/_extends.scss */
+  .highlight {
+    padding: 18px;
+  }
+}
+
+/* line 116, ../../mysite/scss/_extends.scss */
+.highlight.neutral {
+  background: #eeeeee;
+  color: #1a1f22;
+}
+/* line 120, ../../mysite/scss/_extends.scss */
+.highlight.neutral a {
+  color: #f2565f;
+}
+/* line 123, ../../mysite/scss/_extends.scss */
+.highlight.neutral a:hover {
+  color: #ea121e;
+}
+
+/* line 139, ../../mysite/scss/_extends.scss */
+.formatted-text > *:first-child,
+[class*="__text"] > *:first-child {
+  margin-top: 0;
+}
+/* line 143, ../../mysite/scss/_extends.scss */
+.formatted-text > *:last-child,
+[class*="__text"] > *:last-child {
+  margin-bottom: 0;
+}
+/* line 147, ../../mysite/scss/_extends.scss */
+.formatted-text p,
+[class*="__text"] p {
+  margin-top: 1em;
+}
+/* line 150, ../../mysite/scss/_extends.scss */
+.formatted-text p > *:first-child,
+[class*="__text"] p > *:first-child {
+  margin-top: 0 !important;
+}
+/* line 154, ../../mysite/scss/_extends.scss */
+.formatted-text p .btn,
+[class*="__text"] p .btn {
+  margin-top: 1em;
+}
+/* line 158, ../../mysite/scss/_extends.scss */
+.formatted-text p + ul,
+[class*="__text"] p + ul, .formatted-text p + ol,
+[class*="__text"] p + ol, .formatted-text p + h1,
+[class*="__text"] p + h1, .formatted-text p + h2,
+[class*="__text"] p + h2, .formatted-text p + h3,
+[class*="__text"] p + h3, .formatted-text p + h4,
+[class*="__text"] p + h4, .formatted-text p + h5,
+[class*="__text"] p + h5, .formatted-text p + h6,
+[class*="__text"] p + h6, .formatted-text p + table,
+[class*="__text"] p + table, .formatted-text p + div,
+[class*="__text"] p + div, .formatted-text p + blockquote,
+[class*="__text"] p + blockquote {
+  margin-top: 1em;
+}
+/* line 173, ../../mysite/scss/_extends.scss */
+.formatted-text blockquote,
+[class*="__text"] blockquote {
+  margin-top: 1em;
+}
+/* line 176, ../../mysite/scss/_extends.scss */
+.formatted-text blockquote > *:first-child,
+[class*="__text"] blockquote > *:first-child {
+  margin-top: 0 !important;
+}
+/* line 180, ../../mysite/scss/_extends.scss */
+.formatted-text blockquote + ul,
+[class*="__text"] blockquote + ul, .formatted-text blockquote + ol,
+[class*="__text"] blockquote + ol, .formatted-text blockquote + h1,
+[class*="__text"] blockquote + h1, .formatted-text blockquote + h2,
+[class*="__text"] blockquote + h2, .formatted-text blockquote + h3,
+[class*="__text"] blockquote + h3, .formatted-text blockquote + h4,
+[class*="__text"] blockquote + h4, .formatted-text blockquote + h5,
+[class*="__text"] blockquote + h5, .formatted-text blockquote + h6,
+[class*="__text"] blockquote + h6, .formatted-text blockquote + table,
+[class*="__text"] blockquote + table, .formatted-text blockquote + div,
+[class*="__text"] blockquote + div, .formatted-text blockquote + p,
+[class*="__text"] blockquote + p {
+  margin-top: 1em;
+}
+/* line 195, ../../mysite/scss/_extends.scss */
+.formatted-text h1,
+[class*="__text"] h1, .formatted-text h2,
+[class*="__text"] h2, .formatted-text h3,
+[class*="__text"] h3, .formatted-text h4,
+[class*="__text"] h4, .formatted-text h5,
+[class*="__text"] h5, .formatted-text h6,
+[class*="__text"] h6 {
+  font-family: "Bitter";
+  font-weight: 700;
+}
+/* line 199, ../../mysite/scss/_extends.scss */
+.formatted-text h1 + p,
+[class*="__text"] h1 + p, .formatted-text h1 + ul,
+[class*="__text"] h1 + ul, .formatted-text h1 + ol,
+[class*="__text"] h1 + ol, .formatted-text h1 + table,
+[class*="__text"] h1 + table, .formatted-text h1 + div,
+[class*="__text"] h1 + div, .formatted-text h1 + blockquote,
+[class*="__text"] h1 + blockquote, .formatted-text h2 + p,
+[class*="__text"] h2 + p, .formatted-text h2 + ul,
+[class*="__text"] h2 + ul, .formatted-text h2 + ol,
+[class*="__text"] h2 + ol, .formatted-text h2 + table,
+[class*="__text"] h2 + table, .formatted-text h2 + div,
+[class*="__text"] h2 + div, .formatted-text h2 + blockquote,
+[class*="__text"] h2 + blockquote, .formatted-text h3 + p,
+[class*="__text"] h3 + p, .formatted-text h3 + ul,
+[class*="__text"] h3 + ul, .formatted-text h3 + ol,
+[class*="__text"] h3 + ol, .formatted-text h3 + table,
+[class*="__text"] h3 + table, .formatted-text h3 + div,
+[class*="__text"] h3 + div, .formatted-text h3 + blockquote,
+[class*="__text"] h3 + blockquote, .formatted-text h4 + p,
+[class*="__text"] h4 + p, .formatted-text h4 + ul,
+[class*="__text"] h4 + ul, .formatted-text h4 + ol,
+[class*="__text"] h4 + ol, .formatted-text h4 + table,
+[class*="__text"] h4 + table, .formatted-text h4 + div,
+[class*="__text"] h4 + div, .formatted-text h4 + blockquote,
+[class*="__text"] h4 + blockquote, .formatted-text h5 + p,
+[class*="__text"] h5 + p, .formatted-text h5 + ul,
+[class*="__text"] h5 + ul, .formatted-text h5 + ol,
+[class*="__text"] h5 + ol, .formatted-text h5 + table,
+[class*="__text"] h5 + table, .formatted-text h5 + div,
+[class*="__text"] h5 + div, .formatted-text h5 + blockquote,
+[class*="__text"] h5 + blockquote, .formatted-text h6 + p,
+[class*="__text"] h6 + p, .formatted-text h6 + ul,
+[class*="__text"] h6 + ul, .formatted-text h6 + ol,
+[class*="__text"] h6 + ol, .formatted-text h6 + table,
+[class*="__text"] h6 + table, .formatted-text h6 + div,
+[class*="__text"] h6 + div, .formatted-text h6 + blockquote,
+[class*="__text"] h6 + blockquote {
+  margin-top: 1em;
+}
+/* line 209, ../../mysite/scss/_extends.scss */
+.formatted-text ol,
+[class*="__text"] ol {
+  margin: 0 0 1em 1.25em;
+}
+/* line 212, ../../mysite/scss/_extends.scss */
+.formatted-text ol li,
+[class*="__text"] ol li {
+  list-style-type: disc;
+}
+/* line 218, ../../mysite/scss/_extends.scss */
+.formatted-text ol li,
+[class*="__text"] ol li {
+  list-style-type: decimal;
+}
+/* line 223, ../../mysite/scss/_extends.scss */
+.formatted-text ul,
+[class*="__text"] ul, .formatted-text ol,
+[class*="__text"] ol {
+  list-style: outside;
+}
+/* line 226, ../../mysite/scss/_extends.scss */
+.formatted-text ul + p,
+[class*="__text"] ul + p, .formatted-text ul + h1,
+[class*="__text"] ul + h1, .formatted-text ul + h2,
+[class*="__text"] ul + h2, .formatted-text ul + h3,
+[class*="__text"] ul + h3, .formatted-text ul + h4,
+[class*="__text"] ul + h4, .formatted-text ul + h5,
+[class*="__text"] ul + h5, .formatted-text ul + h6,
+[class*="__text"] ul + h6, .formatted-text ul + table,
+[class*="__text"] ul + table, .formatted-text ul + div,
+[class*="__text"] ul + div, .formatted-text ul + blockquote,
+[class*="__text"] ul + blockquote, .formatted-text ol + p,
+[class*="__text"] ol + p, .formatted-text ol + h1,
+[class*="__text"] ol + h1, .formatted-text ol + h2,
+[class*="__text"] ol + h2, .formatted-text ol + h3,
+[class*="__text"] ol + h3, .formatted-text ol + h4,
+[class*="__text"] ol + h4, .formatted-text ol + h5,
+[class*="__text"] ol + h5, .formatted-text ol + h6,
+[class*="__text"] ol + h6, .formatted-text ol + table,
+[class*="__text"] ol + table, .formatted-text ol + div,
+[class*="__text"] ol + div, .formatted-text ol + blockquote,
+[class*="__text"] ol + blockquote {
+  margin-top: 1em;
+}
+/* line 240, ../../mysite/scss/_extends.scss */
+.formatted-text ul,
+[class*="__text"] ul {
+  margin: 0 0 1em 1.25em;
+}
+/* line 245, ../../mysite/scss/_extends.scss */
+.formatted-text div > *:first-child,
+[class*="__text"] div > *:first-child {
+  margin-top: 0;
+}
+/* line 249, ../../mysite/scss/_extends.scss */
+.formatted-text div + p,
+[class*="__text"] div + p, .formatted-text div + ul,
+[class*="__text"] div + ul, .formatted-text div + ol,
+[class*="__text"] div + ol, .formatted-text div + h1,
+[class*="__text"] div + h1, .formatted-text div + h2,
+[class*="__text"] div + h2, .formatted-text div + h3,
+[class*="__text"] div + h3, .formatted-text div + h4,
+[class*="__text"] div + h4, .formatted-text div + h5,
+[class*="__text"] div + h5, .formatted-text div + h6,
+[class*="__text"] div + h6, .formatted-text div + table,
+[class*="__text"] div + table, .formatted-text div + div,
+[class*="__text"] div + div, .formatted-text div + blockquote,
+[class*="__text"] div + blockquote {
+  margin-top: 1em;
+}
+
+/* line 9, ../scss/slider.scss */
+.page__slider .bx-wrapper {
+  position: relative;
+}
+/* line 14, ../scss/slider.scss */
+.page__slider .bx-wrapper:hover .bx-controls-direction a {
+  opacity: 1;
+}
+/* line 20, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-pager {
+  margin-top: 18px;
+  font-size: 0;
+  text-align: right;
+}
+/* line 26, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-pager .bx-pager-item {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+/* line 30, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-pager .bx-pager-item a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #eeeeee;
+}
+/* line 36, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-pager .bx-pager-item a.active, .page__slider .bx-wrapper .bx-pager .bx-pager-item a:hover {
+  background: #f2565f;
+}
+@media screen and (max-width: 480px) {
+  /* line 44, ../scss/slider.scss */
+  .page__slider .bx-wrapper .bx-controls-direction {
+    display: none !important;
+  }
+}
+/* line 49, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction a {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 100;
+  text-align: center;
+  font-size: 0;
+  border-width: 2px;
+  padding: 6px !important;
+  -moz-transition: opacity, 0.2s, linear;
+  -o-transition: opacity, 0.2s, linear;
+  -webkit-transition: opacity, 0.2s, linear;
+  transition: opacity, 0.2s, linear;
+  margin-top: -18px;
+}
+/* line 62, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction a:after {
+  font-size: 1.375rem;
+}
+/* line 67, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction .bx-prev {
+  left: 18px;
+}
+/* line 70, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction .bx-prev:after {
+  content: "";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1em;
+  text-align: center;
+}
+/* line 75, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction .bx-next {
+  right: 18px;
+}
+/* line 78, ../scss/slider.scss */
+.page__slider .bx-wrapper .bx-controls-direction .bx-next:after {
+  content: "";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1em;
+  text-align: center;
+}
+/* line 85, ../scss/slider.scss */
+.page__slider .slides__slide {
+  position: relative;
+}
+/* line 88, ../scss/slider.scss */
+.page__slider .slides__slide .slide__caption {
+  position: absolute;
+  bottom: 72px;
+  left: 72px;
+  right: 72px;
+  color: #ffffff;
+}
+/* line 95, ../scss/slider.scss */
+.page__slider .slides__slide .slide__caption h3 {
+  font-size: 2.25rem;
+}
+/* line 99, ../scss/slider.scss */
+.page__slider .slides__slide .slide__caption h3,
+.page__slider .slides__slide .slide__caption p {
+  display: block;
+}
+/* line 104, ../scss/slider.scss */
+.page__slider .slides__slide .slide__caption h3 + p {
+  margin-top: 9px;
+}
+/* line 108, ../scss/slider.scss */
+.page__slider .slides__slide .slide__caption p + .btn,
+.page__slider .slides__slide .slide__caption h3 + .btn {
+  margin-top: 18px;
+}
+@media screen and (min-width: 481px) and (max-width: 1036px) {
+  /* line 88, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption {
+    bottom: 36px;
+    left: 36px;
+    right: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  /* line 120, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption p {
+    display: none;
+  }
+  /* line 124, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption .btn {
+    font-size: 1rem;
+    border-width: 2px;
+    padding: 9px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 88, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption {
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+  }
+  /* line 136, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption h3 {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  /* line 140, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption h3 + .btn {
+    margin-top: 9px !important;
+  }
+  /* line 145, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption .btn {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 88, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption {
+    text-align: center;
+  }
+  /* line 153, ../scss/slider.scss */
+  .page__slider .slides__slide .slide__caption h3 {
+    display: none;
+  }
+}
+/* line 159, ../scss/slider.scss */
+.page__slider .slides__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

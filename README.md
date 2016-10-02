@@ -1,0 +1,1 @@
+<% include Slider SlideWidth=1200, SlideHeight=400 %>

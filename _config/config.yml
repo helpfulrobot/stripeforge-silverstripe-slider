@@ -3,6 +3,9 @@ Name: slider
 After:
   - 'tweaks/*'
 ---
-# ShopItem:
-#   extensions:
-#     - StockShopItemExtension
+Page_Controller:
+  extensions:
+    - SliderPageControllerExtension
+Page:
+  extensions:
+    - SliderPageExtension

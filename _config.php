@@ -1,4 +1,4 @@
 <?php
 
-global $slider;
-$slider = 'slider';
+global $moduleSlider;
+$moduleSlider = 'slider';

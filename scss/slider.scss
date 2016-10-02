@@ -1,0 +1,163 @@
+@import 'compass/css3';
+@import 'susy';
+@import '../../mysite/scss/vendor/_fontawesome-variables';
+@import '../../mysite/scss/_mixins';
+@import '../../mysite/scss/_variables';
+@import '../../mysite/scss/_extends';
+
+.page__slider {
+  .bx-wrapper {
+    position: relative;
+
+    &:hover {
+      .bx-controls-direction {
+        a {
+          opacity: 1;
+        }
+      }
+    }
+
+    .bx-pager {
+      margin-top: $dist/2;
+      font-size: 0;
+      text-align: right;
+      @extend %cf;
+
+      .bx-pager-item {
+        display: inline-block;
+        margin-left: 0.25rem;
+
+        a {
+          display: block;
+          width: $dist/2;
+          height: $dist/2;
+          background: $box-color;
+
+          &.active,
+          &:hover {
+            background: $ac;
+          }
+        }
+      }
+    }
+
+    .bx-controls-direction {
+      @include breakpoint(null, $bp-s) {
+        display: none !important;
+      }
+      
+      a {
+        opacity: 0;
+        @include v-center();
+        z-index: 100;
+        text-align: center;
+        font-size: 0;
+        @extend %btn;
+        @extend %btn-white;
+        border-width: 2px;
+        padding: $dist/6 !important;
+        @include transition(opacity, 0.2s, linear);
+        margin-top: -$dist/2;
+
+        &:after {
+          font-size: $fs-medium;
+        }
+      }
+
+      .bx-prev {
+        left: $dist/2;
+
+        &:after {
+          @include fontawesome($fa-angle-left);
+        }
+      }
+
+      .bx-next {
+        right: $dist/2;
+
+        &:after {
+          @include fontawesome($fa-angle-right);
+        }
+      }
+    }
+  }
+
+  .slides__slide {
+    position: relative;
+
+    .slide__caption {
+      position: absolute;
+      bottom: $dist*2;
+      left: $dist*2;
+      right: $dist*2;
+      color: #ffffff;
+
+      h3 {
+        font-size: $fs-bigger;
+      }
+
+      h3,
+      p {
+        display: block;
+      }
+
+      h3 + p {
+        margin-top: $dist/4;
+      }
+
+      p + .btn,
+      h3 + .btn {
+        margin-top: $dist/2
+      }
+
+      @include breakpoint($bp-s, $bp-l) {
+        bottom: $dist;
+        left: $dist;
+        right: $dist;
+      }
+
+      @include breakpoint(null, 820px) {
+        p {
+          display: none;
+        }
+
+        .btn {
+          font-size: $fs;
+          border-width: 2px;
+          padding: $dist/4;
+        }
+      }
+
+      @include breakpoint(null, $bp-s) {
+        bottom: $dist/2;
+        left: $dist/2;
+        right: $dist/2;
+
+        h3 {
+          font-size: $fs-big;
+          line-height: 1;
+
+          & + .btn {
+            margin-top: $dist/4 !important;
+          }
+        }
+
+        .btn {
+          font-size: $fs-small;
+        }
+      }
+
+      @include breakpoint(null, $bp-xs) {
+        text-align: center;
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      @include resp-img();
+    }
+  }
+}
