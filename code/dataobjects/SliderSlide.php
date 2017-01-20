@@ -8,7 +8,10 @@ class SliderSlide extends DataObject {
     'Title' => 'Varchar(255)',
     'Content' => 'Text',
     'Link' => 'NamedLinkField',
-    'ShowTitle' => 'Boolean'
+    'ShowTitle' => 'Boolean',
+    'FontColor' => 'Varchar(7)',
+    'BackgroundColor' => 'Varchar(7)',
+    'BackgroundOpacity' => 'Varchar(3)'
   ];
 
   private static $has_one = [
@@ -107,6 +110,7 @@ class SliderSlide extends DataObject {
           TextField::create('Title', 'Titel'),
           DropdownField::create('ShowTitle', 'Titel ausgeben', [1 => 'Ja', 0 => 'Nein'], 1),
           TextareaField::create('Content', 'Beschreibung'),
+          ColourPicker::create('FontColor', 'Schriftfarbe'),
           NamedLinkFormField::create('Link', 'Link'),
           UploadField::create('Image', 'Bild')
             ->setFolderName('slider')

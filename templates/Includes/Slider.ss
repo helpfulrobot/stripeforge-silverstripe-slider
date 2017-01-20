@@ -7,10 +7,10 @@
             <% if $ShowTitle || $Content || $Link %>
               <div class="slide__caption">
                 <% if $ShowTitle %>
-                  <h3>$Title</h3>
+                  <h3 style="color: $FontColor;">$Title</h3>
                 <% end_if %>
                 <% if $Content %>
-                  <p>$Content</p>
+                  <p style="color: $FontColor">$Content</p>
                 <% end_if %>
                 <% if $Link %>
                   <a class="btn white" href="$Link.Url" <% if $ImageLink.Linkmode == URL %>target="_blank"<% end_if %> title="$Link.Page.Title">$Link.Title</a>
