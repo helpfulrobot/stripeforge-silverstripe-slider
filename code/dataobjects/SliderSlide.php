@@ -103,7 +103,7 @@ class SliderSlide extends DataObject {
     $fields = FieldList::create(
       TabSet::create('Root',
         Tab::create('Main', 'Hauptteil',
-          CheckboxSetField::create('ManyMany[Active]', 'Status', [1 => 'Ja']),
+          CheckboxSetField::create('ManyMany[Active]', 'Aktiv', [1 => 'Ja']),
           TextField::create('Title', 'Titel'),
           DropdownField::create('ShowTitle', 'Titel ausgeben', [1 => 'Ja', 0 => 'Nein'], 1),
           TextareaField::create('Content', 'Beschreibung'),
