@@ -15,91 +15,22 @@ class SliderSlide extends DataObject {
     'Image' => 'Image'
   ];
 
-  private static $belongs_to = [];
-  private static $has_many = [];
-  private static $many_many = [];
   private static $belongs_many_many = [
     'Pages' => 'Page'
   ];
 
-  // private static $many_many_extraFields = [
-    // 'RelationName' => ['FieldName' => 'FieldType']
-  // ];
-
-  // private static $searchable_fields = [];
   private static $summary_fields = [
     'Image.CMSThumbnail' => 'Vorschau',
     'Title' => 'Titel',
     'NiceActive' => 'Aktiv'
   ];
 
-  // private static $default_sort = 'Title';
-
-  private static $defaults = [];
-
-  public function populateDefaults() {
-    parent::populateDefaults();
-  }
-
-  public function onBeforeWrite() {
-    parent::onBeforeWrite();
-  }
-
-  public function onAfterWrite() {
-    parent::onAfterWrite();
-  }
-
-  public function onBeforeDelete() {
-    parent::onBeforeDelete();
-  }
-
-  public function onAfterDelete() {
-    parent::onAfterDelete();
-  }
-
-  /*
-  public function canCreate($member = null) {
-    $can = Permission::check(['ADMIN', 'CMSACCESSLeftAndMain', 'SITETREEEDITALL']);
-    return $can;
-  }
-
-  public function canEdit($member = null) {
-    $can = Permission::check(['ADMIN', 'CMSACCESSLeftAndMain', 'SITETREEEDITALL']);
-    return $can;
-  }
-
-  public function canDelete($member = null) {
-    $can = Permission::check(['ADMIN', 'CMSACCESSLeftAndMain', 'SITETREEEDITALL']);
-    return $can;
-  }
-
-  public function canView($member = null) {
-    $can = Permission::check(['ADMIN', 'CMSACCESSLeftAndMain', 'SITETREEVIEWALL']);
-    return $can;
-  }
-  */
-
   public function getCMSValidator() {
-    // $requiredFields = parent::getCMSValidator();
-    // $requiredFields->addRequiredField('FieldName');
     $requiredFields = RequiredFields::create('Title', 'Image');
     return $requiredFields;
   }
 
-  /*
-  public function validate() {
-    $result = parent::validate();
-    if($this->Value == 'Key') {
-      $result->error('Custom Error Message');
-    }
-    return $result;
-  }
-  */
-
   public function getCMSFields() {
-    // $fields = parent::getCMSFields();
-    // $fields->addFieldsToTab('Root.Main', []);
-    
     $fields = FieldList::create(
       TabSet::create('Root',
         Tab::create('Main', 'Hauptteil',
@@ -124,7 +55,7 @@ class SliderSlide extends DataObject {
         </div>'
       ), '');
     };
-    
+
     $this->extend('updateCMSFields', $fields);
 
     return $fields;

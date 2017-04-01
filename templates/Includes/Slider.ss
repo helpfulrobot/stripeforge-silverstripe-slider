@@ -1,4 +1,4 @@
-<% cached $ActiveSlides.Count, $ActiveSlides.max(LastEdited) %>
+<% cached 'slider', $ID, $ActiveSlides.Count, $ActiveSlides.max(LastEdited), $CurrentLocale %>
   <% if $ActiveSlides %>
     <section class="page__slider">
       <div class="slider__slides">

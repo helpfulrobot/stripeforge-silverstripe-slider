@@ -54,8 +54,12 @@ class SliderPageExtension extends DataExtension {
           ->setEmptyString('(Bitte wählen Sie eine Seite)'),
         DropdownField::create('DisplaySlidesOnChildren', 'Auf Unterseiten anzeigen', [1 => 'Ja', 0 => 'Nein'], 1)
           ->setRightTitle('Zeigt die Slides auch auf den Unterseiten an, sollten diese keine eigenen haben.'),
-        GridField::create('Slides', 'Slides', $this->owner->Slides(), SFGrid_Relation::create(30, false, 'SortOrder'))
+        GridField::create('Slides', 'Slides', $this->owner->Slides(), $gridConf = GridFieldConfig_RelationEditor::create())
       ]);
+
+      $gridConf->addComponent(new GridFieldAddExistingSearchButton());
+      $gridConf->addComponent(new GridFieldDeleteAction(true));
+      $gridConf->addComponent(new GridFieldOrderableRows('SortOrder'));
 
       if(!count($source)) {
         $fields->removeByName('SlidesFromID');

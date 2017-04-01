@@ -1,41 +1,13 @@
 <?php
 class SliderPageControllerExtension extends DataExtension {
-  
-  private static $allowed_actions = [
-  ];
 
-  public function onBeforeInit() {
+  public function onAfterInit() {
     global $moduleSlider;
-    // - Requirements Management CSS Files
-    $moduleCSSFiles = Session::get('SFModuleCSSFiles');
 
-    if(!$moduleCSSFiles) {
-      $moduleCSSFiles = [];
-    }
-
-    $requiredCSSFiles = array_flip([
-      $moduleSlider . '/css/slider.css',
-    ]);
-
-    $requiredCSSFiles = array_merge($moduleCSSFiles, $requiredCSSFiles);
-
-    Session::set('SFModuleCSSFiles', $requiredCSSFiles);
-
-    // - Requirements Management JS Files
-    $moduleJSFiles = Session::get('SFModuleJSFiles');
-
-    if(!$moduleJSFiles) {
-      $moduleJSFiles = [];
-    }
-
-    $requiredJSFiles = array_flip([
-      'bxslider.js',
-      $moduleSlider . '/js/slider.js',
-    ]);
-
-    $requiredJSFiles = array_merge($moduleJSFiles, $requiredJSFiles);
-
-    Session::set('SFModuleJSFiles', $requiredJSFiles);
+    Requirements::css($moduleSlider . '/css/slider.css');
+    Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+    Requirements::javascript($moduleSlider . '/js/jquery.bxslider.js');
+    Requirements::javascript($moduleSlider . '/js/slider.js');
   }
 
   public function ActiveSlides() {

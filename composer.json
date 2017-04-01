@@ -6,6 +6,11 @@
     "slider"
   ],
   "type": "silverstripe-module",
+  "require": {
+    "php": ">=5.3.3",
+    "unclecheese/betterbuttons": "1.*",
+    "silverstripe-australia/gridfieldextensions": "1.*"
+  },
   "extra": {
     "installer-name": "slider"
   },

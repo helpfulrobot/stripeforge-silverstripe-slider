@@ -1,7 +1,7 @@
 ---
 Name: slider
-After:
-  - 'tweaks/*'
+Before:
+  - 'mysite/*'
 ---
 Page_Controller:
   extensions:
@@ -9,3 +9,6 @@ Page_Controller:
 Page:
   extensions:
     - SliderPageExtension
+SliderSlide:
+  extensions:
+    - 'FluentExtension'
