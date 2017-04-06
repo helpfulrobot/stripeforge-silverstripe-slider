@@ -41,15 +41,15 @@
 
       a {
         opacity: 0;
-        @include v-center();
+        @include center(v);
         z-index: 100;
         text-align: center;
         font-size: 0;
-        @extend %btn;
-        @extend %btn-white;
+        @extend %button;
+        @extend %button--white;
         border-width: 2px;
         padding: $dist/6 !important;
-        @include transition(opacity, 0.2s, linear);
+        transition: opacity 0.2s linear;
         margin-top: -$dist/2;
 
         &:after {
@@ -61,7 +61,7 @@
         left: $dist/2;
 
         &:after {
-          @include fontawesome($fa-angle-left);
+          @include fontawesome($fa-var-angle-left);
         }
       }
 
@@ -69,7 +69,7 @@
         right: $dist/2;
 
         &:after {
-          @include fontawesome($fa-angle-right);
+          @include fontawesome($fa-var-angle-right);
         }
       }
     }

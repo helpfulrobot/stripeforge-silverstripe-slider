@@ -57,6 +57,7 @@ class SliderPageExtension extends DataExtension {
         GridField::create('Slides', 'Slides', $this->owner->Slides(), $gridConf = GridFieldConfig_RelationEditor::create())
       ]);
 
+      $gridConf->removeComponent('GridFieldAddExistingAutocompleter');
       $gridConf->addComponent(new GridFieldAddExistingSearchButton());
       $gridConf->addComponent(new GridFieldDeleteAction(true));
       $gridConf->addComponent(new GridFieldOrderableRows('SortOrder'));
