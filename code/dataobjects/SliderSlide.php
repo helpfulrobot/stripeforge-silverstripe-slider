@@ -31,10 +31,16 @@ class SliderSlide extends DataObject {
   }
 
   public function getCMSFields() {
+    if($this->ID) {
+      $activeDefault = null;
+    } else {
+      $activeDefault = true;
+    }
+
     $fields = FieldList::create(
       TabSet::create('Root',
         Tab::create('Main', 'Hauptteil',
-          CheckboxSetField::create('ManyMany[Active]', 'Aktiv', [1 => 'Ja'], 1),
+          CheckboxSetField::create('ManyMany[Active]', 'Aktiv', [1 => 'Ja'], $activeDefault),
           TextField::create('Title', 'Titel'),
           DropdownField::create('ShowTitle', 'Titel ausgeben', [1 => 'Ja', 0 => 'Nein'], 1),
           TextareaField::create('Content', 'Beschreibung'),
