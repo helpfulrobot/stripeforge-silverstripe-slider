@@ -9,6 +9,6 @@ Page_Controller:
 Page:
   extensions:
     - SliderPageExtension
-SliderSlide:
-  extensions:
-    - 'FluentExtension'
+#SliderSlide:
+#  extensions:
+#    - 'FluentExtension'
