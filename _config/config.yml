@@ -9,6 +9,10 @@ Page_Controller:
 Page:
   extensions:
     - SliderPageExtension
+---
+Only:
+  moduleexists: 'fluent'
+---
 SliderSlide:
   extensions:
     - 'FluentExtension'
